@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:400,500,600")
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Fire Sans, sans-serif';
+    background-color: linear-gradient(147deg,#f6b323 0%, #f23b26 74%);
+}
+
+.blog-card {
+    position: absolute;
+    height: 370px;
+    width: 95%;
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 50px rgba(252, 56, 56, .3);
+}
+
+.blog-card .inner-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px;
+    height: 360px;
+}
+
+.inner-part .img{
+    height: 260px;
+    width: 260px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 20px;
+    box-shadow: 2px 3px 15px rgba(252, 56, 56, .3);
+}
+
+.img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.content {
+    padding: 0 20px 0 35px;
+    width: 530px;
+    margin-left: 50px;
+}
+
+.content span{
+    display: block;
+    color: #7b7992;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.content .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0d0925;
+    margin-bottom:  20px;
+}
+
+.content .text{
+    font-size: 19px;
+    color:#4e4a67;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.content button{
+    display: inline-flex;
+    padding: 15px 20px;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff0e6;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border: 1px solid #fd3535;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+}
+
+.content button:hover {
+    background: linear-gradient(147deg, #fe791b 0%, #fd1c1c 74%);
+}
+
+.sliders{
+    position: absolute;
+    bottom: 25px;
+    left: 65%;
+    transform: translateX(-50%);
+}
+
+.sliders .tap{
+    padding: absolute;
+    height: 10px;
+    width: 50px;
+    background: #d9d9d9;
+    border-radius: 5px;
+    display: inline-flex;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.sliders .tap:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: -100%;
+    background: linear-gradient(147deg, #f6b323 0%, #f23b26 74%);
+    border-radius: 10px;
+    transform: scaleX(0);
+    transition: transform .6s;
+    transform-origin: left;
+}
+
+.sliders .tap:hover:before{
+    transform: scaleX(1);
+    width: 100%;
+}

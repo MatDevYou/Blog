@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar Menu</title>
+
+    <!-- Link al foglio di stile CSS -->
+    <link rel="stylesheet" href="/card/style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link agli iconi di Boxicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<!-- Barra laterale (Sidebar) -->
+<div class="sidebar">
+    <div class="logo">
+        <span class="logo-text">MM</span>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a href="/dropdown/index.html">
+                <i class='bx bx-home'></i>
+                <span class="tooltip">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="/music/index.html">
+                <i class="fas fa-music"></i>
+                <span class="tooltip">Music</span>
+            </a>
+
+        </li>
+        <li class="dropdown">
+            <a href="#">
+                <i class='bx bx-category'></i>
+                <span class="tooltip">Categories</span>
+            </a>
+        <li>
+            <a href="#">
+                <i class='bx bx-cog'></i>
+                <span class="tooltip">Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="/snake/index.html">
+                <i class="fas fa-gamepad" style="color: white;"></i> 
+                <span class="tooltip">Snake</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/MatDevYou">
+                <i class="fab fa-github"></i>
+                <span class="tooltip">GitHub</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+<!-- Contenuto principale -->
+<div class="main-content">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+        <i class='bx bx-menu-alt-left'></i>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-12 text-center">
+                <div class="presentazione">
+                    <h1>Hi everyone, I'm Matteo🙂</h1>
+                    <h2>  I study at ITS and i am passionate about it, mountains and music. <br>
+                            When I have free time I like to go hiking in the mountains.
+                    </h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-list">
+        <a href="/tecnlogia-medicina/index.html" class="card-item">
+            <img src="/dropdown/images/tecnologia.jpg" alt="Card Image">
+            <span class="developer">Technology-Medicine</span>
+            <h3>"Artificial Intelligence in Medicine: What is its Impact?"</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+        <a href="#" class="card-item">
+            <img src="/dropdown/images/cloud.computing.jpg" alt="Card Image">
+            <span class="designer">X2DVR</span>
+            <h3>A "designer" is a design expert.</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+        <a href="/muchonina/index.html" class="card-item">
+            <img src="/WhatsApp Image 2023-10-25 at 15.10.15.jpeg" alt="Card Image">
+            <span class="editor"></span>
+            <h3></h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+    </div>
+
+
+    
+</div>
+
+<!-- Script per gestire l'apertura/chiusura della barra laterale -->
+<script>
+    function toggleSidebar() {
+        document.querySelector('.sidebar').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

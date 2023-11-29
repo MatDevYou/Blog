@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar Menu</title>
+
+    <!-- Link al foglio di stile CSS -->
+    <link rel="stylesheet" href="/card/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/snake/script.js">
+    <link rel="stylesheet" href="/snake/style.css">
+
+    <!-- Link agli iconi di Boxicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<!-- Barra laterale (Sidebar) -->
+<div class="sidebar">
+    <div class="logo">
+        <span class="logo-text">MM</span>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a href="#">
+                <i class='bx bx-home'></i>
+                <span class="tooltip">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="fas fa-music"></i>
+            </a>
+
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-user'></i>
+                <span class="tooltip">Profile</span>
+            </a>
+        </li>
+        <li class="dropdown">
+            <a href="#">
+                <i class='bx bx-category'></i>
+                <span class="tooltip">Categories</span>
+            </a>
+        <li>
+            <a href="#">
+                <i class='bx bx-cog'></i>
+                <span class="tooltip">Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="/snake/index.html">
+                <i class="fas fa-gamepad" style="color: white;"></i> 
+                <span class="tooltip">Snake</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/MatDevYou">
+                <i class="fab fa-github"></i>
+                <span class="tooltip">GitHub</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+<!-- Contenuto principale -->
+<div class="main-content">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+        <i class='bx bx-menu-alt-left'></i>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-12 text-center">
+                <div class="wrapper">
+                    <div class="game-details">
+                      <span class="score">Score: 0</span>
+                      <span class="high-score">High Score: 0</span>
+                    </div>
+                    <div class="play-board"></div>
+                    <div class="controls">
+                      <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+                      <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
+                      <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
+                      <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
+                    </div>
+                  </div>              
+    </div>
+
+</div>
+
+<!-- Script per gestire l'apertura/chiusura della barra laterale -->
+<script>
+    function toggleSidebar() {
+        document.querySelector('.sidebar').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology-Medicine</title>
+
+    <link rel="stylesheet" href="/card/style.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body> 
+
+<div class="sidebar">
+    <div class="logo">
+        <span class="logo-text">MM</span>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a href="/dropdown/index.html">
+                <i class='bx bx-home'></i>
+                <span class="tooltip">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="/music/index.html">
+                <i class="fas fa-music"></i>
+                <span class="tooltip">Music</span>
+            </a>
+        </li>
+
+        <li class="dropdown">
+            <a href="#">
+                <i class='bx bx-category'></i>
+                <span class="tooltip">Categories</span>
+            </a>
+        <li>
+            <a href="#">
+                <i class='bx bx-cog'></i>
+                <span class="tooltip">Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/MatDevYou">
+                <i class="fab fa-github"></i>
+                <span class="tooltip">GitHub</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="main-content">
+    <div class="toggle-btn" onclick="toggleSidebar()">
+        <i class='bx bx-menu-alt-left'></i>
+    </div>
+    <div style="text-align: center;">
+        <h1>Che cosa si intende per intelligenza artificiale?</h1>
+        <p >
+            L'intelligenza artificiale è la capacità di una macchina di "ragionare, apprendere e risolvere problemi", combinando vaste quantità di dati attraverso istruzioni precise apprese automaticamente dalla macchina stessa. La disponibilità di sistemi di intelligenza artificiale come ChatGPT al grande pubblico ha contribuito a rendere accessibile un argomento che inizialmente era di dominio esclusivo degli addetti ai lavori.
+        </p>
+
+    </div> <br>
+
+    <div style="text-align: center;">
+        <h1>Perché è importante l’intelligenza artificiale in campo medico?</h1>
+        <p>
+            La disponibilità di dati in ambito medico è cresciuta enormemente così come le fonti da cui essi provengono. Accanto ai dati tradizionali “strutturati”, rappresentabili in righe e colonne come avviene con i fogli di Excel o con i principali database (cartelle cliniche, Medline, linee guida e database biomolecolari e genetici) sono sempre più disponibili dati non strutturati (come testi, immagini, suoni, sensori, dispositivi indossabili come magliette, braccialetti, orologi intelligenti, conversazioni provenienti dai social media).
+        </p>
+        <p>
+            Si stima addirittura che circa l’80% dei dati generati quotidianamente non sia strutturato. Gli algoritmi di intelligenza artificiale in ambito medico sono usati per interpretare questa enorme mole di dati e per identificare possibili relazioni di causa-effetto tra i dati stessi e le patologie di cui un paziente soffre.
+        </p> <br>
+    </div>
+
+    <!-- Altre sezioni centrate qui... -->
+
+    <div style="text-align: center;">
+        <h1>L’uso dell'intelligenza artificiale in medicina comporta dei rischi?</h1>
+        <p>
+            Uno dei rischi più importanti legato all’uso dell'intelligenza artificiale in medicina riguarda che i sistemi utilizzati non siano stati sufficientemente testati e supportati da prove scientifiche.
+        </p>
+        <p>
+            I sistemi di intelligenza artificiale andrebbero istruiti adeguatamente per evitare distorsioni di valutazioni. Infatti, sono capitati casi di strumenti di intelligenza artificiale che hanno fallito nel rispondere a determinati quesiti perché pazienti per i quali si cercava la risposta non erano adeguatamente rappresentati nel campione con il quale la IA non era stata ben istruita.
+        </p>
+    </div>
+
+</div>
+
+<!-- Script per gestire l'apertura/chiusura della barra laterale -->
+<script>
+    function toggleSidebar() {
+        document.querySelector('.sidebar').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
