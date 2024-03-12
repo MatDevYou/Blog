@@ -147,3 +147,10 @@ body {
 .card-list {
     margin-top: 30px; /* Puoi regolare il valore secondo le tue esigenze */
 }
+
+.nav-links li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
