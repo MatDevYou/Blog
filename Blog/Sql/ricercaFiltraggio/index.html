@@ -81,7 +81,9 @@
                     In generale, la sintassi di questa clausola è un espressione che può essere o vera o falsa per una
                     certa riga del nostro insieme di dati. L’espressione più semplice ovviamente è l’eguaglianza:
                     <br> <br>
-                    SELECT * FROM Person WHERE surname = 'Mat'
+                    SELECT * FROM Customers WHERE last_name = 'Doe'
+                    <br><br>
+                    <img class="Where" src="../images/esWhere.png" alt="Card Image"><br>
                     <br><br>
                     In questo caso verranno restituite le persone aventi un certo cognome.
                     <br><br>
@@ -90,7 +92,9 @@
                     @ il carattere % verrà soddisfatto da qualsiasi sequenza di caratteri trovata;<br>
                     @ il carattere _ verrà soddisfatto da qualsiasi carattere (singolo) trovato.
                     <br><br>
-                    SELECT * FROM Person WHERE surname = 'Mat' AND given_names LIKE 'Rossi%'
+                    SELECT * FROM Customers WHERE last_name = 'Doe' AND country LIKE 'UK'
+                    <br><br>
+                    <img class="Where" src="../images/like.png" alt="Card Image"><br>
                     <br><br>
                     le espressioni si possono combinare con l’operatore OR, soddisfatto quando almeno una delle
                     espressioni è vera:
@@ -133,7 +137,7 @@
                     L’operatore BETWEEN è comodo per cercare valori in un intervallo, ad esempio di date, ma può essere
                     usato anche con gli altri tipi. L’intervallo si intende chiuso (con gli estremi); quindi con la
                     seguente interrogazione avremo anche i libri pubblicati nel 1980 e nel 1993:
-<br><br>
+                    <br><br>
                     SELECT title, pub_year FROM Book WHERE pub_year BETWEEN 1980 AND 1993
 
                 </p>
@@ -143,100 +147,24 @@
             <div class="card-item">
 
                 <br>
-                <h1>Creazione di una tabella</h1><br>ß
+                <h1>Ordinamento</h1><br>
                 <p>
-                    Una tabella può essere visualizzata come una disposizione bidimensionale di dati costituita da righe
-                    e colonne. Per creare una tabella, utilizzare l'istruzione CREATE TABLE. <br><br>
+                    Per ordinare i risultati di una query si usa la clausola ORDER BY, seguita dalle espressioni da
+                    valutare per effettuare l’ordinamento. Ad esempio:
+                    <br><br>
+                    SELECT last_name, age from Customers WHERE NOT country = 'UK' order by last_name desc
+                    <img class="Where" src="../images/order by.png" alt="Card Image"><br>
+                    <br><br>
+                    Questa query restituisce i libri pubblicati in ordine di titolo; se li volessimo ordinati prima per
+                    anno di pubblicazione e poi per titolo, basterebbe modificare la clausola in questo modo:
+                    <br><br>
+                    
 
-                    Create table nome_tabella ( <br>
-                    nome_colonna tipo_colonna [ vincoli_di_colonna ],<br>
-                    nome_colonna tipo_colonna [ vincoli_di_colonna ]
-                    )
-                </p>
-                <p> <br>
-                    nome_colonna: è il nome della colonna che compone la tabella. <br><br>
-
-                    tipo_colonna: è l'indicazione del tipo di dato che la colonna potra'
-                    contenere. <br><br>
-
-                    vincoli_di_colonna: sono vincoli di integrita' che vengono applicati
-                    al singolo attributo ad esempio
-                    NOT NULL
-                    PRIMARY KEY,che indica che la colonna è la chiave primaria della
-                    tabella.
 
                 </p>
             </div>
 
-            <div class="card-item">
-
-                <br>
-                <h1>Esempio creazione tabella</h1><br>
-                <p>
-
-                    Ma facciamo un esempio, Supponiamo di voler creare due tabelle: "Ordini" e "DettagliOrdine". Ogni
-                    ordine ha uno o più dettagli ordine. Utilizzeremo la chiave primaria dell'ordine come chiave esterna
-                    nei dettagli ordine. <br><br>
-
-                    CREATE TABLE Ordini (
-                    id_ordine INT PRIMARY KEY,<br>
-                    data_ordine DATE,<br>
-                    cliente VARCHAR(100) <br>
-                    ); <br><br>
-
-                    CREATE TABLE DettagliOrdine (<br>
-                    id_dettaglio INT PRIMARY KEY,<br>
-                    id_ordine INT,<br>
-                    prodotto VARCHAR(100),<br>
-                    quantita INT,<br>
-                    prezzo DECIMAL(10, 2),<br>
-                    FOREIGN KEY (id_ordine) REFERENCES Ordini(id_ordine)<br>
-                    );<br>
-                </p>
-
-            </div>
-
-            <div class="card-item">
-
-                <br>
-                <h1>Modifica tabella</h1><br>
-                <p>
-                    I vincoli possono essere aggiunti a una nuova tabella o a una tabella esistente. <br>
-                    Per aggiungere una chiave univoca o primaria, un vincolo referenziale o un vincolo di controllo,
-                    utilizzare l'istruzione CREATE TABLE o ALTER TABLE. <br>
-                    Per eliminare un vincolo, utilizzare l'istruzione ALTER TABLE. <br><br>
-                </p>
-                <p>
-                    ALTER TABLE nome_tabella <br>
-                    ADD nome_colonna datatype;
-                </p>
-            </div>
-
-            <div class="card-item">
-
-                <br>
-                <h1>Eliminazione tabella</h1><br>
-
-                <p>
-                    ALTER TABLE nome_tabella <br>
-                    DROP COLUMN nome_colonnas;
-                </p>
-            </div>
-
-            <div class="card-item">
-                <h1></h1>
-
-                <p>
-                    Ci sono molti altri comandi ma per la base ci siamo
-                </p>
-                <p>
-
-                </p>
-            </div>
-        </div>
-    </div>
-
-
+           
 
     </div>
 
