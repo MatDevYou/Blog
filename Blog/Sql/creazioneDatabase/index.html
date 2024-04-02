@@ -1,182 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Database</title>
 
     <link rel="stylesheet" href="../creazioneDatabase/style.css">
-  
-   
+
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    
+
 </head>
-<body> 
 
-<div class="sidebar">
-    <div class="logo">
-        <span class="logo-text">MM</span>
-    </div>
-    <ul class="nav-links">
-        <li>
-            <a href="../Blog/Categorie/index.html">
-                <i class='bx bx-home'></i>
-                <span class="tooltip">Home</span>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">MM</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../Blog/Categorie/index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="tooltip">Home</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="../dropdown/index.html">
+                    <i class='bx bx-category'></i>
+                    <span class="tooltip">Arguments</span>
+                </a>
+            <li>
+                <a href="https://github.com/MatDevYou">
+                    <i class="fab fa-github"></i>
+                    <span class="tooltip">GitHub</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li>
+                <a href="https://chatgpt.com/">
+                    <img src="../images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://gemini.google.com">
+                    <img src="../images/geminiLogo.png" alt="Gemini"> <span class="tooltip">Gemini</span>
+                </a>
+            </li>
+        </ul>
+        <div class="back-button" onclick="goBack()">
+            <a href="/Blog/Sql/index.html">
+                <i class='bx bx-chevron-left'></i>
             </a>
-        </li>
-        <li class="dropdown">
-            <a href="../dropdown/index.html">
-                <i class='bx bx-category'></i>
-                <span class="tooltip">Arguments</span>
-            </a>
-        <li>
-            <a href="https://github.com/MatDevYou">
-                <i class="fab fa-github"></i>
-                <span class="tooltip">GitHub</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav-links">
-        <li>
-          <a href="https://chatgpt.com/">
-            <img src="../images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
-          </a>
-        </li>
-
-        <li>
-            <a href="https://gemini.google.com">
-              <img src="../images/geminiLogo.png"  alt="Gemini"> <span class="tooltip">Gemini</span>
-            </a>
-          </li>
-      </ul>
-      <div class="back-button" onclick="goBack()">
-    <a href="/Blog/Sql/index.html">
-        <i class='bx bx-chevron-left'></i>
-    </a>
-    </div>
-</div>
-
-
-
-<div class="main-content">
-    <div class="toggle-btn" onclick="toggleSidebar()">
-        <i class='bx bx-menu-alt-left'></i>
-    </div>
-    <div class="card-list">
-        <div class="card-item">
-            <br><h1>DDL (Data Definition Language)</h1><br>
-            <p >
-                DDL consente di creare e modificare la struttura di un database, comprese le tabelle, le colonne e le relazioni tra le tabelle. <br>
-                Permette poi di creare e modificare gli indici, che possono migliorare le prestazioni delle query su un database. <br>
-                Inoltre, i comandi DDL possono essere utilizzati per impostare vincoli sui dati memorizzati nel database, garantendo l'integrità e la coerenza dei dati.
-        
-            </p>
-    
-        </div>
-
-        <div class="card-item">
-
-            <br><h1>Creazione di una tabella</h1><br>
-        <p>
-            Una tabella può essere visualizzata come una disposizione bidimensionale di dati costituita da righe e colonne. Per creare una tabella, utilizzare l'istruzione CREATE TABLE. <br><br>
-
-            Create table nome_tabella ( <br>
-        nome_colonna tipo_colonna  [ vincoli_di_colonna ],<br>
-        nome_colonna tipo_colonna  [ vincoli_di_colonna ]
-        )
-        </p>
-        <p> <br>
-            nome_colonna: è il nome della colonna che compone la tabella. <br><br>
-
-            tipo_colonna: è l'indicazione del tipo di dato che la colonna potra'
-            contenere. <br><br>
-
-            vincoli_di_colonna: sono vincoli di integrita' che vengono applicati
-            al singolo attributo ad esempio 
-            NOT NULL
-            PRIMARY KEY,che indica che la colonna è la chiave primaria della
-            tabella.
-
-        </p>
-        </div>
-               
-        <div class="card-item">
-            
-            <br><h1>Esempio creazione tabella</h1><br>
-            <p>
-
-        Ma facciamo un esempio, Supponiamo di voler creare due tabelle: "Ordini" e "DettagliOrdine". Ogni ordine ha uno o più dettagli ordine. Utilizzeremo la chiave primaria dell'ordine come chiave esterna nei dettagli ordine. <br><br>
-
-        CREATE TABLE Ordini (
-        id_ordine INT PRIMARY KEY,<br>
-        data_ordine DATE,<br>
-        cliente VARCHAR(100) <br>
-        ); <br><br>
-
-        CREATE TABLE DettagliOrdine (<br>
-        id_dettaglio INT PRIMARY KEY,<br>
-        id_ordine INT,<br>
-        prodotto VARCHAR(100),<br>
-        quantita INT,<br>
-        prezzo DECIMAL(10, 2),<br>
-        FOREIGN KEY (id_ordine) REFERENCES Ordini(id_ordine)<br>
-        );<br>
-            </p>
-            
-        </div>
-
-        <div class="card-item">
-
-            <br><h1>Modifica tabella</h1><br>
-        <p>
-            I vincoli possono essere aggiunti a una nuova tabella o a una tabella esistente. <br>
-            Per aggiungere una chiave univoca o primaria, un vincolo referenziale o un vincolo di controllo, utilizzare l'istruzione CREATE TABLE o ALTER TABLE. <br>
-            Per eliminare un vincolo, utilizzare l'istruzione ALTER TABLE. <br><br>
-        </p>
-        <p>
-            ALTER TABLE nome_tabella <br>
-            ADD nome_colonna datatype;
-        </p>
-        </div>
-
-        <div class="card-item">
-
-            <br><h1>Eliminazione tabella</h1><br>
-    
-        <p>
-            ALTER TABLE nome_tabella <br>
-            DROP COLUMN nome_colonnas;
-        </p>
-        </div>
-
-        <div class="card-item">
-            <h1></h1>
-
-        <p>
-            Ci sono molti altri comandi ma per la base ci siamo
-        </p>
-        <p>
-            
-        </p>
         </div>
     </div>
-</div>
 
 
-    
-</div>
+
+    <div class="main-content">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <i class='bx bx-menu-alt-left'></i>
+        </div>
+        <div class="card-list">
+            <div class="card-item">
+                <br>
+                <h1>DDL (Data Definition Language)</h1><br>
+                <p>
+                    DDL consente di creare e modificare la struttura di un database, comprese le tabelle, le colonne e
+                    le relazioni tra le tabelle. <br>
+                    Permette poi di creare e modificare gli indici, che possono migliorare le prestazioni delle query su
+                    un database. <br>
+                    Inoltre, i comandi DDL possono essere utilizzati per impostare vincoli sui dati memorizzati nel
+                    database, garantendo l'integrità e la coerenza dei dati.
+
+                </p>
+
+            </div>
+
+            <div class="card-item">
+
+                <br>
+                <h1>Creazione di una tabella</h1><br>
+                <p>
+                    Una tabella può essere visualizzata come una disposizione bidimensionale di dati costituita da righe
+                    e colonne. Per creare una tabella, utilizzare l'istruzione CREATE TABLE. <br><br>
+
+                    Create table nome_tabella ( <br>
+                    nome_colonna tipo_colonna [ vincoli_di_colonna ],<br>
+                    nome_colonna tipo_colonna [ vincoli_di_colonna ]
+                    )
+                </p>
+                <p> <br>
+                    nome_colonna: è il nome della colonna che compone la tabella. <br><br>
+
+                    tipo_colonna: è l'indicazione del tipo di dato che la colonna potra'
+                    contenere. <br><br>
+
+                    vincoli_di_colonna: sono vincoli di integrita' che vengono applicati
+                    al singolo attributo ad esempio
+                    NOT NULL
+                    PRIMARY KEY,che indica che la colonna è la chiave primaria della
+                    tabella.
+
+                </p>
+            </div>
+
+            <div class="card-item">
+
+                <br>
+                <h1>Esempio creazione tabella</h1><br>
+                <p>
+
+                    Ma facciamo un esempio, Supponiamo di voler creare due tabelle: "Ordini" e "DettagliOrdine". Ogni
+                    ordine ha uno o più dettagli ordine. Utilizzeremo la chiave primaria dell'ordine come chiave esterna
+                    nei dettagli ordine. <br><br>
+
+                    CREATE TABLE Ordini (
+                    id_ordine INT PRIMARY KEY,<br>
+                    data_ordine DATE,<br>
+                    cliente VARCHAR(100) <br>
+                    ); <br><br>
+
+                    CREATE TABLE DettagliOrdine (<br>
+                    id_dettaglio INT PRIMARY KEY,<br>
+                    id_ordine INT,<br>
+                    prodotto VARCHAR(100),<br>
+                    quantita INT,<br>
+                    prezzo DECIMAL(10, 2),<br>
+                    FOREIGN KEY (id_ordine) REFERENCES Ordini(id_ordine)<br>
+                    );<br>
+                </p>
+
+            </div>
+
+            <div class="card-item">
+
+                <br>
+                <h1>Modifica tabella</h1><br>
+                <p>
+                    I vincoli possono essere aggiunti a una nuova tabella o a una tabella esistente. <br>
+                    Per aggiungere una chiave univoca o primaria, un vincolo referenziale o un vincolo di controllo,
+                    utilizzare l'istruzione CREATE TABLE o ALTER TABLE. <br>
+                    Per eliminare un vincolo, utilizzare l'istruzione ALTER TABLE. <br><br>
+                </p>
+                <p>
+                    ALTER TABLE nome_tabella <br>
+                    ADD nome_colonna datatype;
+                </p>
+            </div>
+
+            <div class="card-item">
+
+                <br>
+                <h1>Eliminazione tabella</h1><br>
+
+                <p>
+                    ALTER TABLE nome_tabella <br>
+                    DROP COLUMN nome_colonnas;
+                </p>
+            </div>
+
+            <div class="card-item">
+
+                <br>
+                <h1>Il comando UPDATE</h1><br>
+                <p>
+                    Il comando UPDATE serve a modificare dati già inseriti nelle tabelle del database. La sua sintassi è
+                    la seguente:
+                    <br><br>
+                    UPDATE nome_tabella SET nomeCampo1 = <valore1> [,nomeCampoX = <valoreX>]* [ WHERE predicato ]
+                            <br><br> Il significato del comando è quello di modificare i campi indicati nella clausola
+                            SET delle
+                            righe della tabella nome_tabella che soddisfano il predicato indicato nella clausola WHERE.
+                            <br><br>
+                            L’utilizzo tipo è la modifica di un singolo record, utilizzando l’id: <br>
+
+                            UPDATE Person SET given_names = 'Stefano' WHERE ID = 4
+                            <br><br>
+                            Possiamo fare modifiche massive, ad esempio mettendo a 1 il valore del campo volume di tutti
+                            i record dove tale campo assume il valore nullo:
+                            <br><br>
+                            UPDATE Book SET volume = 1, note='1 solo volume' WHERE volume IS NULL
+                </p>
+            </div>
+
+            <div class="card-item">
+
+                <br>
+                <h1>Il comando Delete</h1><br>
+                <p>
+                    L’istruzione DELETE permette di eliminare i record di una tabella che soddisfano un certo predicato:
+                    <br><br>
+                    DELETE FROM nome_tabella [ WHERE predicato ]
+                </p>
+            </div>
+
+        </div>
+    </div>
 
 
-<!-- Script per gestire l'apertura/chiusura della barra laterale -->
-<script>
-    function toggleSidebar() {
-        document.querySelector('.sidebar').classList.toggle('active');
-    }
-</script>
+
+    </div>
+
+
+    <!-- Script per gestire l'apertura/chiusura della barra laterale -->
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
 
 </body>
+
 </html>

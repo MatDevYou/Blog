@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+
+    <link rel="stylesheet" href="../creazioneDatabase/style.css">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">MM</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../Blog/Categorie/index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="tooltip">Home</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="../dropdown/index.html">
+                    <i class='bx bx-category'></i>
+                    <span class="tooltip">Arguments</span>
+                </a>
+            <li>
+                <a href="https://github.com/MatDevYou">
+                    <i class="fab fa-github"></i>
+                    <span class="tooltip">GitHub</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li>
+                <a href="https://chatgpt.com/">
+                    <img src="../images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://gemini.google.com">
+                    <img src="../images/geminiLogo.png" alt="Gemini"> <span class="tooltip">Gemini</span>
+                </a>
+            </li>
+        </ul>
+        <div class="back-button" onclick="goBack()">
+            <a href="/Blog/Sql/index.html">
+                <i class='bx bx-chevron-left'></i>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="main-content">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <i class='bx bx-menu-alt-left'></i>
+        </div>
+        <div class="card-list">
+            <div class="card-item">
+                <br>
+                <h1>Group By</h1><br>
+                <p>
+                    La clausola GROUP BY serve a specificare quali sono i campi su cui effettuare i raggruppamenti: il
+                    motore di query, per ogni riga esaminerà tali campi e la classificherà nel gruppo corrispondente. Si
+                    possono specificare calcoli da effettuare per ogni gruppo.
+                    <br> Ad esempio la query seguente restituisce, per ogni gruppo (surname), il numero di occorrenze
+                    trovate, cioè quante persone hanno quel cognome:
+                    <br><br>
+                    SELECT country, COUNT(*) AS customers FROM customers GROUP BY country
+                    <img class="Where" src="../images/count.png" alt="Card Image"><br>
+                    <br><br>
+                    In questo caso il motore raggruppa le righe in base al country, e per ogni gruppo effettua il
+                    conteggio di quanti elementi sono presenti nel gruppo quindi conta quanti customers ci sono nel
+                    rispettivo country.
+                    <br><br>
+                    Da quanto detto, possiamo desumere una naturale limitazione di SQL: se viene specificata una
+                    clausola GROUP BY, allora nella clausola SELECT deve esserci:
+                    <br><br>
+                    @ o un campo specificato nella clausola GROUP BY;<br>
+                    @ oppure una funzione di aggregazione.
+
+                </p>
+
+            </div>
+
+            <div class="card-item">
+
+                <br>
+                <h1>Funzioni di aggregazione </h1><br>
+                <p>
+                    Le funzioni più comuni sono:
+                    <br><br>
+                    @ COUNT per effettuare conteggi nel gruppo;<br>
+                    @ SUM per le somme;<br>
+                    @ MAX e MIN;<br>
+                    @ AVG per calcolare la media.<br><br>
+                    <b>La funzione SUM</b><br><br>
+                    Questa funzione somma i valori dei campi trovati nel gruppo. <br>
+                    I valori nulli vengono ignorati,
+                    contrariamente a quanto farebbe una somma semplice.
+                    <img class="Where" src="../images/sum.png" alt="Card Image"><br>
+                    Questa query seleziona la somma degli importi (amount) dalla tabella "Orders" solo per quegli ordini
+                    in cui il customer_id corrisponde a 4. Il risultato della query sarà la somma totale degli importi
+                    per tutti gli ordini associati al cliente con ID 4. <br><br>
+                    <b>Le funzioni MIN, MAX e AVG</b><br><br>
+                    Con queste funzioni si possono ottenere i valori massimo e minimo di una colonna, in base al
+                    criterio di ordinamento predefinito (ad esempio per il testo verrà usato un ordinamento alfabetico).
+                    <br><br>
+                    Naturalmente più funzioni possono essere usate nella stessa query. La seguente restituisce, per ogni
+                    anno di pubblicazione, il primo titolo in ordine alfabetico, il numero di libri pubblicati, la media
+                    del numero di pagine e il numero di pagine del libro più grande:
+                    <br><br>
+                    SELECT Book.pub_year, MIN(title), COUNT(*), AVG(pages), MAX(pages) FROM Book GROUP BY pub_year
+                    <br><br>
+                    <b>Filtraggio sul raggruppamento</b><br><br>
+                    A differenza di WHERE, che agisce a livello di singola riga, la parola chiave HAVING permette di
+                    effettuare un filtraggio sul ragguppamento. Questa clausola si inserisce subito dopo la GROUP BY.
+                    <img class="Where" src="../images/having.png" alt="Card Image"><br>
+
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Script per gestire l'apertura/chiusura della barra laterale -->
+        <script>
+            function toggleSidebar() {
+                document.querySelector('.sidebar').classList.toggle('active');
+            }
+        </script>
+
+</body>
+
+</html>
