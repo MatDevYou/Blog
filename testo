@@ -1,0 +1,96 @@
+cos'e' sql?
+
+SQL (acronimo di Structured Query Language) è il linguaggio di interrogazione più diffuso tra quelli usati per l'interazione con i principali Database Management Systems (DBMS), soprattutto relazionali. 
+Chi ha necessità di utilizzare database sul proprio server, non può prescindere dalla conoscenza di SQL. 
+Si può pensare, per piccoli progetti, di memorizzare i dati in file di testo, più o meno strutturati; ma per i software professionali e di grandi dimensioni, è quasi sempre impossibile prescindere dall'utilizzo di un database.
+Il database è una struttura software piuttosto complessa, in grado di ottimizzare l'accesso e la modifica di grandi quantità di dati archiviati su un generico dispositivo di archiviazione.
+si è affermata quasi ovunque la classe dei database relazionali. 
+Un database in un sistema relazionale è composto da un'insieme di
+tabelle, che corrispondono alle relazioni del modello relazionale. Nella
+terminologia usata nell'SQL non si fa accenno alle relazioni, cosi' come non
+viene usato il termine attributo, ma viene usata la parola colonna, e non si
+parla di tupla, ma di riga.
+
+Progettazione
+
+Per la crezione di un database c'e bisogno di passare trrar queste 4 fasi:
+
+1)Analisi, capire come deve essere il databse prendendo problemi reali, conscetti chiave, dedurre vincoli e relazioni
+e bisogna capire come possono essere i dati :
+- caratteri
+- numerico
+- data
+
+Dentro le tabelle dei database ci sono le entita' ed e' composta da attributi che prende un valore e il valore che prend3e viene utilizzato per descrivere un membro specifico, ma si capisce se guardate la foto qui sotto
+FOTO
+--------------------------------------------------------------------------------
+
+2)Modello E/R
+
+Un diagramma entità relazione (ER) è un tipo di diagramma di flusso che illustra come le "entità", quali persone, oggetti o concetti, si relazionano tra loro all'interno di un sistema.
+Grazie a questo modello riusciamo a capire le relazioni che ci sono tra le entita' e si individua la chiave primaria.
+
+FOTO
+
+La chiave primaria detta anche identificatore serrrve per identificare in modo univoco ogni record della tabella.
+
+FOTO
+
+--------------------------------------------------------------------------------
+
+3)Modello Logico
+contiene più dettagli di un modello concettuale. Qui vengono definite entità in maniera piu dettagliata e si aggiungono le chiavi esterne dove e' necessario.
+Una chiave esterna è una colonna o un gruppo di colonne di una tabella che contiene valori corrispondenti alla chiave primaria in un'altra tabella. Le chiavi esterne vengono utilizzate per le unire le tabelle. La seguente figura mostra le chiavi primaria ed esterna delle tabelle customer e orders dal database di dimostrazione.
+FOTO
+
+Le chiavi esterne vengono segnalate quando appaiono nel modello poiché la loro presenza può limitare la capacità di eliminare righe dalle tabelle. Prima di poter eliminare in modo sicuro una riga, è necessario eliminare tutte le righe che fanno riferimento ad essa tramite le chiavi esterne.
+
+--------------------------------------------------------------------------------
+
+4)Modello Fisico
+in questa parte della progettazione diciamo che traduciamo il modello logico in linguaggio SQL e andando poi a creare il rispettivo database.
+
+
+---------------------------------------------------------------------------------
+Creare database
+
+La sintassi utilizzati nei DBMS piu diffusi e' la seguente:
+
+CREATE DATABASE nome_database
+
+Una volta creato il database è possibile creare le tabelle che lo
+compogono. L'istruzione SQL preposta a questo scopo è:
+
+CREATE table nome_tabella (
+nome_colonna tipo_colonna  [ vincoli_di_colonna ],
+nome_colonna tipo_colonna  [ vincoli_di_colonna ]
+)
+
+nome_colonna: è il nome della colonna che compone la tabella.
+
+tipo_colonna: è l'indicazione del tipo di dato che la colonna potra'
+contenere.
+
+vincoli_di_colonna: sono vincoli di integrita' che vengono applicati
+al singolo attributo ad esempio 
+NOT NULL
+PRIMARY KEY,che indica che la colonna è la chiave primaria della
+tabella.
+
+
+Ma facciamo un esempio, Supponiamo di voler creare due tabelle: "Ordini" e "DettagliOrdine". Ogni ordine ha uno o più dettagli ordine. Utilizzeremo la chiave primaria dell'ordine come chiave esterna nei dettagli ordine.
+
+CREATE TABLE Ordini (
+    id_ordine INT PRIMARY KEY,
+    data_ordine DATE,
+    cliente VARCHAR(100)
+);
+
+CREATE TABLE DettagliOrdine (
+    id_dettaglio INT PRIMARY KEY,
+    id_ordine INT,
+    prodotto VARCHAR(100),
+    quantita INT,
+    prezzo DECIMAL(10, 2),
+    FOREIGN KEY (id_ordine) REFERENCES Ordini(id_ordine)
+);

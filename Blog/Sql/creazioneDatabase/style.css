@@ -148,24 +148,42 @@ body {
     margin-top: 30px; /* Puoi regolare il valore secondo le tue esigenze */
 }
 
+p {
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
 .nav-links li img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
   }
   
-  .back-button {
+  .card-item img {
+    max-width: 150%; /* Assicura che l'immagine non superi la larghezza del contenitore */
+    height: auto; /* Impedisce il ridimensionamento distorto */
+    width: 150px; /* Definisci la larghezza desiderata */
+    height: 150px; /* Definisci l'altezza desiderata */
+}
+
+.back-button {
     position: absolute;
     bottom: 30px;
     left: 10px;
-    background-color: white;
+    background-color: black;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .back-button i {
     font-size: 24px;
-    color:black;
+    color: #fff;
 }
