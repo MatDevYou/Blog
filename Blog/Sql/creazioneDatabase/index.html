@@ -118,24 +118,19 @@
                 <h1>Esempio creazione tabella</h1><br>
                 <p>
 
-                    Ma facciamo un esempio, Supponiamo di voler creare due tabelle: "Ordini" e "DettagliOrdine". Ogni
-                    ordine ha uno o più dettagli ordine. Utilizzeremo la chiave primaria dell'ordine come chiave esterna
-                    nei dettagli ordine. <br><br>
+                    Facciamo un esempio, Supponiamo di voler creare la tabella "students". <br>
+                    <br>
 
-                    CREATE TABLE Ordini (
-                    id_ordine INT PRIMARY KEY,<br>
-                    data_ordine DATE,<br>
-                    cliente VARCHAR(100) <br>
-                    ); <br><br>
-
-                    CREATE TABLE DettagliOrdine (<br>
-                    id_dettaglio INT PRIMARY KEY,<br>
-                    id_ordine INT,<br>
-                    prodotto VARCHAR(100),<br>
-                    quantita INT,<br>
-                    prezzo DECIMAL(10, 2),<br>
-                    FOREIGN KEY (id_ordine) REFERENCES Ordini(id_ordine)<br>
+                    CREATE TABLE Students( <br>
+                    id int PRIMARY KEY,<br>
+                    name varchar(50),<br>
+                    address text,<br>
+                    grades varchar(50),<br>
+                    phone varchar(10)<br>
                     );<br>
+                    <br><br>
+                    <img src="../images/Screenshot 2024-04-03 alle 23.41.48.png" alt="Card Image"><br>
+
                 </p>
 
             </div>
