@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+
+    <link rel="stylesheet" href="../Introduzione/style.css">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">MM</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../Blog/Categorie/index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="tooltip">Home</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="../dropdown/index.html">
+                    <i class='bx bx-category'></i>
+                    <span class="tooltip">Arguments</span>
+                </a>
+            <li>
+                <a href="https://github.com/MatDevYou">
+                    <i class="fab fa-github"></i>
+                    <span class="tooltip">GitHub</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li>
+                <a href="https://chatgpt.com/">
+                    <img src="../images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://gemini.google.com">
+                    <img src="../images/geminiLogo.png" alt="Gemini"> <span class="tooltip">Gemini</span>
+                </a>
+            </li>
+        </ul>
+        <div class="back-button" onclick="goBack()">
+            <a href="../index.html">
+                <i class='bx bx-chevron-left'></i>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="main-content">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <i class='bx bx-menu-alt-left'></i>
+        </div>
+        <div class="card-list">
+            <div class="card-item">
+                <br>
+                <h1>Introduzione</h1><br>
+                <p>
+                    HTML è l'acronimo di HyperText Markup Language ("Linguaggio di contrassegno per gli Ipertesti") e
+                    non è un linguaggio di programmazione. <br>
+                    Si tratta invece di un linguaggio di markup (di
+                    'contrassegno' o 'di marcatura'), che permette di indicare come disporre gli elementi all'interno di
+                    una pagina.
+                    <br><br>
+                    Queste indicazioni vengono date attraverso degli appositi marcatori, detti tag ('etichette'), che
+                    hanno la caratteristica di essere inclusi tra parentesi angolari (ad es, <'img'> è il segnaposto di
+                        un'immagine).
+                        <br><br>
+                        Con HTML quindi indichiamo, attraverso i tag, quali elementi dovranno apparire su uno schermo e
+                        come essi debbano essere disposti. Tutte queste indicazioni sono contenute in un documento HTML,
+                        spesso detto "Pagina HTML". Una pagina HTML è rappresentata da un file di testo, ovvero un file
+                        che possiamo modificare con programmi come notepad e in genere hanno un nome che finisce con
+                        l'estensione .html.
+                </p>
+
+            </div>
+
+            <div class="card-item">
+
+                <br>
+                <h1>HTML + CSS + JavaScript</h1>
+                <br>
+                <p>
+                    Anche se non ce ne occuperemo direttamente, è utile sapere che per lavorare con HTML è utile
+                    conoscere tutto il cosiddetto "stack", ovvero tutte le tecnologie necessarie a realizzare un sito o
+                    una applicazione.
+                    <br><br>
+                    In passato si utilizzavano alcuni tag HTML per definire font (tipi di carattere), i colori o le
+                    dimensioni degli oggetti sullo schermo. Oggi il quadro è definitivamente cambiato e molte di quelle
+                    funzionalità sono deprecate favorendo una divisione dei compiti più chiara tra diversi strumenti:
+                    <br> <br>
+                   @ HTML
+                    serve a definire quali sono gli elementi in gioco, stabilire collegamenti (link) tra le pagine e
+                    l'importanza (non la forma o il colore) che hanno i testi, creare form per gli utenti, fissare
+                    titoli, caricare immagini, video, etc.
+                    <br> <br>
+                   @ CSS
+                    o "fogli di stile". Si tratta di una serie di regole che permettono di definire l'aspetto (lo stile)
+                    che devono assumere gli elementi sulla pagina. <br> Dimensioni, colori, animazioni, ogni caratteristica
+                    visuale può essere manipolata.
+                    <br> <br>
+                   @ JavaScript 
+                    è un linguaggio di programmazione che consente di manipolare veramente qualunque cosa nella pagina
+                    HTML: lo stile, i contenuti della pagina, ma soprattutto l'interazione con l'utente. <br>Ci permette di
+                    creare la logica dell'interfaccia utente (o anche di una applicazione) e di sfruttare le API messe a
+                    disposizione dal browser: dalla gestione del mouse al touch, dalla manipolazione delle immagini,
+                    alle richieste di dati dinamiche (in modalità Ajax) alla gestione di dati in locale (grazie ai
+                    LocalStorage).
+                </p>
+            </div>
+
+
+
+
+
+        </div>
+
+
+        <!-- Script per gestire l'apertura/chiusura della barra laterale -->
+        <script>
+            function toggleSidebar() {
+                document.querySelector('.sidebar').classList.toggle('active');
+            }
+        </script>
+
+</body>
+
+</html>

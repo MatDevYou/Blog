@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+
+    <link rel="stylesheet" href="../Introduzione/style.css">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">MM</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../Blog/Categorie/index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="tooltip">Home</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="../dropdown/index.html">
+                    <i class='bx bx-category'></i>
+                    <span class="tooltip">Arguments</span>
+                </a>
+            <li>
+                <a href="https://github.com/MatDevYou">
+                    <i class="fab fa-github"></i>
+                    <span class="tooltip">GitHub</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li>
+                <a href="https://chatgpt.com/">
+                    <img src="../images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://gemini.google.com">
+                    <img src="../images/geminiLogo.png" alt="Gemini"> <span class="tooltip">Gemini</span>
+                </a>
+            </li>
+        </ul>
+        <div class="back-button" onclick="goBack()">
+            <a href="../index.html">
+                <i class='bx bx-chevron-left'></i>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="main-content">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <i class='bx bx-menu-alt-left'></i>
+        </div>
+        <div class="card-list">
+            <div class="card-item">
+                <h1>Elementi e tag</h1><br>
+                <p>
+                    Un tag è una keyword del linguaggio racchiusa tra parentesi angolari (<>). <br> Esempi di tag sono
+                        <'html'>, <'body'> e <'h1'>.
+                                    I tag HTML non sono "case sensitive" ciò significa che scrivere
+                                    <'head> o <'HEAD> è esattamente la stessa cosa. <br> In ogni caso la consuetudine è
+                                            quella di
+                                            scrivere i tag in minuscolo.
+                </p>
+
+            </div>
+
+            <div class="card-item">
+                <h1>Elementi contenitori e autonomi</h1>
+                <br>
+                <p>
+                    Molti elementi in HTML servono per descrivere porzioni di pagina, aree, o contenuti.
+                    Pertanto un elemento HTML è quasi sempre un contenitore e il suo contenuto è delimitato da:
+                    <br> <br>
+                    @ tag di apertura <br>
+                    @ tag di chiusura
+                    <br> <br>
+                <pre style="font-size: larger;">
+                    &lt;!doctype html&gt;
+                    &lt;html lang="it"&gt;
+                        &lt;head&gt;
+                            &lt;title&gt;Ciao Mondo!&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;h1&gt;Ciao Mondo!&lt;/h1&gt;
+                            &lt;p&gt;Questa è la nostra prima pagina HTML!&lt;/p&gt;
+                            &lt;img src="immagine.jpg"&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                            </pre>
+                </p>
+            </div>
+
+            <div class="card-item">
+                <h1>Attributi</h1><br>
+                <p>
+                    I tag HTML possono essere corredati di uno o più attributi, che servono per meglio specificare la
+                    funzione o la tipologia dell'elemento, per memorizzare dati o per arricchire di significato il
+                    contenuto. <br>
+                    Un tag con attributi si scrive in questo modo:
+                    <br><br>
+                <pre style="font-size: larger;">
+&lt;input type="email" name="email" placeholder="Scrivi il tuo indirizzo email..."&gt;
+                    </pre>
+
+                <br><br>
+
+
+                </p>
+
+                <p>
+                    Il tag input indica genericamente un elemento che consente agli utenti di inserire delle
+                    informazioni. <br>
+                    Grazie agli attributi però, possiamo specificare che vogliamo un indirizzo email (attributo type) e
+                    possiamo comunicarlo all'utente con un messaggio (attributo placeholder).
+                </p> <br>
+                <h1>Gli attributi comuni, global attributes</h1>
+                <br>
+                <h2>Attributi Core</h2> <br>
+                <img class="Where" src="../images/corer.png" alt="Card Image"><br>
+                <br>
+                <h2>Attributi per la gestione di eventi</h2> <br>
+                <p>
+                    Sono attributi che servono per associare determinati comportamenti dell'interfaccia utente in
+                    seguito allo scatenarsi di eventi. I comportamenti sono rappresentati da funzioni JavaScript,
+                </p>
+                <img class="eventi" src="../images/eventi.png" alt="Card Image"><br>
+            </div>
+
+
+
+        </div>
+
+
+        <!-- Script per gestire l'apertura/chiusura della barra laterale -->
+        <script>
+            function toggleSidebar() {
+                document.querySelector('.sidebar').classList.toggle('active');
+            }
+        </script>
+
+</body>
+
+</html>
