@@ -158,14 +158,14 @@ body {
     position: absolute;
     bottom: 30px;
     left: 10px;
-    background-color: white;
+    background-color: black;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .back-button i {
     font-size: 24px;
-    color:black;
+    color: #fff;
 }
