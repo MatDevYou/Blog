@@ -139,17 +139,190 @@
                 <h2>Attributi per la gestione di eventi</h2> <br>
                 <p>
                     Sono attributi che servono per associare determinati comportamenti dell'interfaccia utente in
-                    seguito allo scatenarsi di eventi. I comportamenti sono rappresentati da funzioni JavaScript,
+                    seguito allo scatenarsi di eventi. I comportamenti sono rappresentati da funzioni JavaScript.
+                    <br> <br>
+                    @ onclick Rileva il click (o il tap) effettuato sull'elemento <br> <br>
+                    @ onload Associa un comportamento alla conclusione del caricamento dell'elemento <br> <br>
+                    @ onscroll Attiva un comportamento correlato allo scrolling della pagina <br> <br>
+                    @ ondrag Si attiva quando iniziamo a trascinare un elemento che abbiamo indicato come
+                    draggable="true" <br><br>
                 </p>
-                <img class="eventi" src="../images/eventi.png" alt="Card Image"><br>
+
             </div>
 
+            <div class="card-item">
+                <h1>Titoli, paragrafi e testi</h1><br>
+                <p>
+                    HTML è nato per la realizzazione di contenuti ipertestuali ed è naturale che la maggior parte dei
+                    tag siano stati creati per l'organizzazione dei testi, quindi per la definizione di titoli,
+                    paragrafi sezioni, articoli, etc.
+                    <br> <br>
+                <h2>I paragrafi </h2> <br>
+                <p>
+                    Il paragrafo è un elemento contenitore che al suo interno prevede l'inserimento di testo e di altri
+                    tag.
+                    <br>Ecco un esempio:
+                <pre style="font-size: larger;"> <br>
+&lt;p&gt;
+Nel primo paragrafo di questa trattazione, ci occuperemo
+dell'importanza del testo nel Web. Grazie ad un semplice esempio
+possiamo sperimentare molte cose.
+&lt;/p&gt;
+                </pre>
 
+                <h2> Andare a capo, br</h2> <br>
+                <p>
+                    Il tag &lt;br&gt; sta per break line e serve per andare a capo nel bel mezzo di un testo. <br> Come
+                    è facile
+                    notare infatti, anche se andiamo a capo all'interno dell'editor, il testo nel browser non va a capo
+                    se non alla fine dello spazio disponibile per il suo contenitore.
+
+                <pre style="font-size: larger;"> <br>
+Questo è un testo che va a capo
+spesso all'interno dell'editor
+tuttavia i browser ignoreranno
+questo fatto e considereranno &lt;br&gt;
+il testo come una singola
+riga continua, che va a capo
+solo quando incontra il limite
+del proprio contenitore
+                    </pre>
+                </p>
+
+                <h2>Headings, i titoli h1, h2, h3, etc.</h2> <br>
+                <p>
+                    I titoli (headings) sono i tag che ci aiutano a definire il tema della pagina. <br> In genere sono
+                    rappresentati in grassetto e con una dimensione del testo ingrandita. <br>Anche questi sono elementi
+                    di
+                    tipo block e sia le dimensioni sia il margine applicato per default dal browser sono proporzionali
+                    all'importanza del titolo.
+                    <br> <br>
+                <pre style="font-size: larger;">
+&lt;h1&gt;Casa&lt;/h1&gt;
+&lt;h2&gt;Acquistare la casa&lt;/h2&gt;
+&lt;h3&gt;Le pratiche per l'acquisto di casa&lt;/h3&gt;
+&lt;h3&gt;Agenzie immobiliari, quali scegliere&lt;/h3&gt;
+&lt;h2&gt;Arredare la casa&lt;/h2&gt;
+&lt;h3&gt;Come scegliere la cucina per la nuova casa&lt;/h3&gt;
+&lt;h3&gt;Lampadari, tipologie e differenze&lt;/h3&gt;
+                    </pre>
+
+
+
+            </div>
+
+            <div class="card-item">
+                <h1>Elenchi puntati e numerati</h1><br>
+                <p>
+                    Dal punto di vista dell'organizzazione del testo sono utili ad esempio quando occorre sintetizzare
+                    concetti per punti, indicare in sequenza le fasi di un processo oppure stilare un elenco di
+                    definizioni
+                    o un glossario. <br> <br>
+                    Nella organizzazione della struttura della pagina sono spesso utilizzati per definire menu ad
+                    esempio,
+                    cosa che anche semanticamente ha una sua valenza, perché si tratta sempre di liste.
+                    <br><br>
+                    Vediamo dunque quali sono le tre tipologie di elenco disponibili in HTML:
+                    <br> <br>
+                    @ Elenchi ordinati <br>
+                    @ Elenchi non ordinati <br>
+                    @ Elenchi di definizioni <br> <br>
+                <h2>UL, gli elenchi non ordinati (o elenchi puntati)</h2>
+                <br>
+                <p>
+                    L'elenco non ordinato (unordered list) è forse il più usato e si descrive utilizzando il tag
+                    &lt;ul&gt;.
+                    <br>
+                    Al suo interno possiamo inserire gli elementi della lista (list item) utilizzando il tag &lt;li&gt;.
+                    <br>
+                    Ecco un semplice esempio:
+                    <br>
+                <pre style="font-size: larger;">
+                        <br>
+&lt;ul&gt;
+  &lt;li&gt;primo elemento&lt;/li&gt;
+  &lt;li&gt;secondo elemento&lt;/li&gt;
+  &lt;li&gt;terzo elemento&lt;/li&gt;
+&lt;/ul&gt;
+                    </pre>
+                <p>
+                <ul>
+                    <li>primo elemento</li>
+                    <li>secondo elemento</li>
+                    <li>terzo elemento</li>
+                </ul>
+                <br>
+                <h2>Annidare le liste non numerate</h2>
+                <br>
+                <p>
+                    In generale possiamo inserire diversi livelli all'interno delle liste, creando delle strutture "ad
+                    albero", utili a definire oggetti come menu o tassonomie. <br>Per farlo è sufficiente inserire un
+                    nuovo
+                    elenco all'interno di un elemento:
+
+                <pre style="font-size: larger;">
+                        <br>
+&lt;ul&gt;
+    &lt;li&gt;primo della 1a lista&lt;/li&gt;
+        &lt;li&gt;secondo della 1a lista
+            &lt;ul&gt;
+                &lt;li&gt;primo della 2a lista&lt;/li&gt;
+                &lt;li&gt;secondo della 2a lista
+            &lt;ul&gt;
+                &lt;li&gt;primo della 3a lista&lt;/li&gt;
+            &lt;/ul&gt;
+                lt;/li&gt;
+                &lt;li&gt;terzo della 2a lista&lt;/li&gt;
+            &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+                    </pre>
+                <br>
+                <ul>
+                    <li>primo della 1a lista</li>
+                    <li>secondo della 1a lista
+                        <ul>
+                            <li>primo della 2a lista</li>
+                            <li>secondo della 2a lista
+                                <ul>
+                                    <li>primo della 3a lista</li>
+                                </ul>
+                            </li>
+                            <li>terzo della 2a lista</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <h2>OL, gli elenchi ordinati (o elenchi numerati)</h2>
+                <br>
+                <p>
+                    Gli elenchi ordinati (ordered list) sono contraddistinti dall'enumerazione degli elementi che
+                    compongono la lista. Il tag da utilizzare per aprire un elenco ordinato è
+                    &lt;lo&gt;e anche in questo caso gli elementi sono individuati dal tag &lt;li&gt;:
+                </p>
+
+                <pre style="font-size: larger;">
+ <br>
+&lt;ol&gt;
+    &lt;li&gt;primo elemento&lt;/li&gt;
+    &lt;li&gt;secondo elemento&lt;/li&gt;
+    &lt;li&gt;terzo elemento&lt;/li&gt;
+&lt;/ol&gt;
+                </pre>
+
+            <p>
+                <ol>
+                    <li>primo elemento</li>
+                    <li>secondo elemento</li>
+                    <li>terzo elemento</li>
+                </ol>
+            </p>
+
+            </div>
 
         </div>
 
 
-        <!-- Script per gestire l'apertura/chiusura della barra laterale -->
         <script>
             function toggleSidebar() {
                 document.querySelector('.sidebar').classList.toggle('active');
