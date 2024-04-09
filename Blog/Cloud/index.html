@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,124 +14,157 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    
+
 </head>
-<body> 
 
-<div class="sidebar">
-    <div class="logo">
-        <span class="logo-text">MM</span>
-    </div>
-    <ul class="nav-links">
-        <li>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">MM</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../dropdown/index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="tooltip">Home</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="#">
+                    <i class='bx bx-category'></i>
+                    <span class="tooltip">Categories</span>
+                </a>
+            <li>
+                <a href="https://github.com/MatDevYou">
+                    <i class="fab fa-github"></i>
+                    <span class="tooltip">GitHub</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li>
+                <a href="https://chatgpt.com/">
+                    <img src="../GoogleIdx/images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://gemini.google.com">
+                    <img src="../dropdown/images/geminiLogo.png" alt="Gemini"> <span class="tooltip">Gemini</span>
+                </a>
+            </li>
+        </ul>
+        <div class="back-button" onclick="goBack()">
             <a href="../dropdown/index.html">
-                <i class='bx bx-home'></i>
-                <span class="tooltip">Home</span>
+                <i class='bx bx-chevron-left'></i>
             </a>
-        </li>
-        <li class="dropdown">
-            <a href="#">
-                <i class='bx bx-category'></i>
-                <span class="tooltip">Categories</span>
-            </a>
-        <li>
-            <a href="https://github.com/MatDevYou">
-                <i class="fab fa-github"></i>
-                <span class="tooltip">GitHub</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav-links">
-        <li>
-          <a href="https://chatgpt.com/">
-            <img src="../GoogleIdx/images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
-          </a>
-        </li>
-
-        <li>
-            <a href="https://gemini.google.com">
-              <img src="../dropdown/images/geminiLogo.png"  alt="Gemini"> <span class="tooltip">Gemini</span>
-            </a>
-          </li>
-      </ul>
-      <div class="back-button" onclick="goBack()">
-        <a href="../dropdown/index.html">
-            <i class='bx bx-chevron-left'></i>
-        </a>
-        </div>
-      
-</div>
-
-
-
-<div class="main-content">
-    <div class="toggle-btn" onclick="toggleSidebar()">
-        <i class='bx bx-menu-alt-left'></i>
-    </div>
-    <div style="text-align: center;">
-
-    <div style="text-align: center;">
-       
-    </div>
-
-</div>
-
-
-<div class="main-content">
-    <div class="toggle-btn" onclick="toggleSidebar()">
-        <i class='bx bx-menu-alt-left'></i>
-    </div>
-    <div class="card-list">
-        <div class="card-item">
-            <img src="../Cloud/images/_989ba13a-541d-4abc-8153-821f5a181241.jpeg" alt="Card Image"><br>
-            <br><h1>Cos'e il Cloud</h1><br>
-            <p>
-                Negli ultimi due decenni, il cloud ha rivoluzionato l'IT e cambiato il modo in cui le aziende forniscono, utilizzano e gestiscono la propria tecnologia. 
-                <br>Il cloud è costituito da una vasta rete di server di computer situati in tutto il mondo insieme a dati, contenuti, applicazioni, database e altre risorse di elaborazione che risiedono su questi server. <br>
-                Il cloud consente alle aziende e ai consumatori di accedere alle risorse di elaborazione on-demand tramite Internet, piuttosto che installare i propri server fisici, eseguire il proprio software e gestire i propri database e consente anche agli utenti di accedere a dati, applicazioni e risorse di elaborazione da qualsiasi parte del mondo, senza dover essere connessi a un computer in ufficio.
-            </p>
-    
         </div>
 
-        <div class="card-item">
-            <img src="#" alt="Card Image"><br>
-            <br><h1>Quali sono le diverse tipologie di modelli di servizi cloud?</h1><br>
-        <p>
-            <br> <strong>IaaS (Infrastructure-as-a-Service):</strong> fornisce l'accesso on-demand all'infrastruttura cloud, come server, storage e rete. Le soluzioni IaaS vengono, in genere, acquistate dai provider di servizi cloud con la formula basata sul costo a consumo, il che contribuisce a ridurre i costi e ottimizzare i budget destinati all'IT. <br>
-            <br> <strong>(Software-as-a-Service):</strong>  fornisce l'accesso per aziende e consumatori alle applicazioni software nel cloud tramite un browser web. Anziché scaricare ed eseguire un'applicazione da un disco rigido su un computer specifico, gli utenti possono accedere alle applicazioni SaaS su qualsiasi dispositivo, da qualsiasi luogo e in qualsiasi momento, semplicemente collegandosi a Internet. I provider SaaS gestiscono tutta la risoluzione dei problemi, la manutenzione e gli aggiornamenti frequenti, assicurando che gli utenti lavorino sempre con software dotati delle funzionalità e delle capacità più recenti. Le applicazioni cloud SaaS sono, in genere, disponibili dietro pagamento di un abbonamento, il che consente di risparmiare sui costi di provisioning, installazione ed esecuzione del software in locale. <br>
-            <br> <strong>PaaS (Platform-as-a-Service): </strong> fornisce alle organizzazioni un ambiente on-demand per lo sviluppo, il test, la delivery e la gestione delle applicazioni software. Le soluzioni PaaS sono progettate per aiutare gli sviluppatori a creare rapidamente app per dispositivi mobili o web senza doversi preoccupare dell'infrastruttura, dei server, dei database, dello storage o della rete necessari per lo sviluppo del software. <br>
-            <br> <strong>Computing senza server: </strong> aiuta gli sviluppatori a creare applicazioni più velocemente, sollevandoli dalla responsabilità di gestione dell'infrastruttura. Con le applicazioni senza server, un provider di servizi cloud fornisce e gestisce l'infrastruttura necessaria per eseguire il codice, consentendo agli sviluppatori di concentrarsi esclusivamente sulla logica aziendale e fornire più valore all'organizzazione. <br>
-        </p>
-        <p>
-        
-        </p> <br>
-        </div>
-
-       
-        
-        <div class="card-item">
-            <img src="#" alt="Card Image"><br>
-            <br><h1></h1><br>
-            <p>
-                
-            </p>
-            <p>
-            
-        </div>
     </div>
-</div>
-
-
-    
-</div>
 
 
 
-<script>
-    function toggleSidebar() {
-        document.querySelector('.sidebar').classList.toggle('active');
-    }
-</script>
+    <div class="main-content">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <!-- Serve per far apparire le 3 linee in alto a destra dopo che diminuisci lo schermo-->
+            <!--  <i class='bx bx-menu-alt-left'></i>-->
+        </div>
+        <div style="text-align: center;">
+
+            <div style="text-align: center;">
+
+            </div>
+
+        </div>
+
+
+        <div class="main-content">
+            <div class="toggle-btn" onclick="toggleSidebar()">
+                <!-- Serve per far apparire le 3 linee in alto a destra dopo che diminuisci lo schermo-->
+                <!--  <i class='bx bx-menu-alt-left'></i>-->
+            </div>
+            <div class="card-list">
+                <div class="card-item">
+                    <img src="../Cloud/images/_989ba13a-541d-4abc-8153-821f5a181241.jpeg" alt="Card Image"><br>
+                    <br>
+                    <h1>Cos'e il Cloud</h1><br>
+                    <p>
+                        Negli ultimi due decenni, il cloud ha rivoluzionato l'IT e cambiato il modo in cui le aziende
+                        forniscono, utilizzano e gestiscono la propria tecnologia.
+                        <br>Il cloud è costituito da una vasta rete di server di computer situati in tutto il mondo
+                        insieme a dati, contenuti, applicazioni, database e altre risorse di elaborazione che risiedono
+                        su questi server. <br>
+                        Il cloud consente alle aziende e ai consumatori di accedere alle risorse di elaborazione
+                        on-demand tramite Internet, piuttosto che installare i propri server fisici, eseguire il proprio
+                        software e gestire i propri database e consente anche agli utenti di accedere a dati,
+                        applicazioni e risorse di elaborazione da qualsiasi parte del mondo, senza dover essere connessi
+                        a un computer in ufficio.
+                    </p>
+
+                </div>
+
+                <div class="card-item">
+                    <img src="#" alt="Card Image"><br>
+                    <br>
+                    <h1>Quali sono le diverse tipologie di modelli di servizi cloud?</h1><br>
+                    <p>
+                        <br> <strong>IaaS (Infrastructure-as-a-Service):</strong> fornisce l'accesso on-demand
+                        all'infrastruttura cloud, come server, storage e rete. Le soluzioni IaaS vengono, in genere,
+                        acquistate dai provider di servizi cloud con la formula basata sul costo a consumo, il che
+                        contribuisce a ridurre i costi e ottimizzare i budget destinati all'IT. <br>
+                        <br> <strong>(Software-as-a-Service):</strong> fornisce l'accesso per aziende e consumatori alle
+                        applicazioni software nel cloud tramite un browser web. Anziché scaricare ed eseguire
+                        un'applicazione da un disco rigido su un computer specifico, gli utenti possono accedere alle
+                        applicazioni SaaS su qualsiasi dispositivo, da qualsiasi luogo e in qualsiasi momento,
+                        semplicemente collegandosi a Internet. I provider SaaS gestiscono tutta la risoluzione dei
+                        problemi, la manutenzione e gli aggiornamenti frequenti, assicurando che gli utenti lavorino
+                        sempre con software dotati delle funzionalità e delle capacità più recenti. Le applicazioni
+                        cloud SaaS sono, in genere, disponibili dietro pagamento di un abbonamento, il che consente di
+                        risparmiare sui costi di provisioning, installazione ed esecuzione del software in locale. <br>
+                        <br> <strong>PaaS (Platform-as-a-Service): </strong> fornisce alle organizzazioni un ambiente
+                        on-demand per lo sviluppo, il test, la delivery e la gestione delle applicazioni software. Le
+                        soluzioni PaaS sono progettate per aiutare gli sviluppatori a creare rapidamente app per
+                        dispositivi mobili o web senza doversi preoccupare dell'infrastruttura, dei server, dei
+                        database, dello storage o della rete necessari per lo sviluppo del software. <br>
+                        <br> <strong>Computing senza server: </strong> aiuta gli sviluppatori a creare applicazioni più
+                        velocemente, sollevandoli dalla responsabilità di gestione dell'infrastruttura. Con le
+                        applicazioni senza server, un provider di servizi cloud fornisce e gestisce l'infrastruttura
+                        necessaria per eseguire il codice, consentendo agli sviluppatori di concentrarsi esclusivamente
+                        sulla logica aziendale e fornire più valore all'organizzazione. <br>
+                    </p>
+                    <p>
+
+                    </p> <br>
+                </div>
+
+
+
+                <div class="card-item">
+                    <img src="#" alt="Card Image"><br>
+                    <br>
+                    <h1></h1><br>
+                    <p>
+
+                    </p>
+                    <p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
 
 </body>
+
 </html>
