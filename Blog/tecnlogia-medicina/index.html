@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,120 +14,146 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    
+
 </head>
-<body> 
 
-<div class="sidebar">
-    <div class="logo">
-        <span class="logo-text">MM</span>
-    </div>
-    <ul class="nav-links">
-        <li>
-            <a href="../Categorie/index.html">
-                <i class='bx bx-home'></i>
-                <span class="tooltip">Home</span>
-            </a>
-        </li>
-        <li class="dropdown">
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">MM</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../Categorie/index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="tooltip">Home</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="../dropdown/index.html">
+                    <i class='bx bx-category'></i>
+                    <span class="tooltip">Arguments</span>
+                </a>
+            <li>
+                <a href="https://github.com/MatDevYou">
+                    <i class="fab fa-github"></i>
+                    <span class="tooltip">GitHub</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li>
+                <a href="https://chatgpt.com/">
+                    <img src="../GoogleIdx/images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://gemini.google.com">
+                    <img src="../dropdown/images/geminiLogo.png" alt="Gemini"> <span class="tooltip">Gemini</span>
+                </a>
+            </li>
+        </ul>
+        <div class="back-button" onclick="goBack()">
             <a href="../dropdown/index.html">
-                <i class='bx bx-category'></i>
-                <span class="tooltip">Arguments</span>
+                <i class='bx bx-chevron-left'></i>
             </a>
-        <li>
-            <a href="https://github.com/MatDevYou">
-                <i class="fab fa-github"></i>
-                <span class="tooltip">GitHub</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav-links">
-        <li>
-          <a href="https://chatgpt.com/">
-            <img src="../GoogleIdx/images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
-          </a>
-        </li>
-
-        <li>
-            <a href="https://gemini.google.com">
-              <img src="../dropdown/images/geminiLogo.png"  alt="Gemini"> <span class="tooltip">Gemini</span>
-            </a>
-          </li>
-      </ul>
-      <div class="back-button" onclick="goBack()">
-    <a href="../dropdown/index.html">
-        <i class='bx bx-chevron-left'></i>
-    </a>
-    </div>
-</div>
-
-
-
-<div class="main-content">
-    <div class="toggle-btn" onclick="toggleSidebar()">
-        <i class='bx bx-menu-alt-left'></i>
-    </div>
-    <div style="text-align: center;">
-
-    <div style="text-align: center;">
-       
-    </div>
-
-</div>
-
-
-<div class="main-content">
-    <div class="toggle-btn" onclick="toggleSidebar()">
-        <i class='bx bx-menu-alt-left'></i>
-    </div>
-    <div class="card-list">
-        <div class="card-item">
-            <img src="../tecnlogia-medicina/images/ia.jpeg" alt="Card Image"><br>
-            <br><h1>Che cosa si intende per intelligenza artificiale?</h1><br>
-            <p >
-                L'intelligenza artificiale è la capacità di una macchina di "ragionare, apprendere e 
-                risolvere problemi", combinando vaste quantità di dati attraverso istruzioni precise apprese automaticamente dalla macchina stessa. 
-               <br> La disponibilità di sistemi di intelligenza artificiale come ChatGPT al grande pubblico ha contribuito a rendere accessibile un argomento che inizialmente era di dominio esclusivo degli addetti ai lavori.
-            </p>
-    
-        </div>
-
-        <div class="card-item">
-            <img src="../tecnlogia-medicina/images/_6a4c3f4a-b707-4b0c-b07e-378f04db24a5.jpeg" alt="Card Image"><br>
-            <br><h1>Perché è importante l’intelligenza artificiale in campo medico?</h1><br>
-        <p>
-            La disponibilità di dati in ambito medico è cresciuta enormemente così come le fonti da cui essi provengono. <br>
-            Accanto ai dati tradizionali “strutturati”, rappresentabili in righe e colonne come avviene con i fogli di Excel o con i principali database (cartelle cliniche, Medline, linee guida e database biomolecolari e genetici) sono sempre più disponibili dati non strutturati (come testi, immagini, suoni, sensori, dispositivi indossabili come magliette, braccialetti, orologi intelligenti, conversazioni provenienti dai social media).<br>
-        </p>
-        <p>
-            Si stima addirittura che circa l’80% dei dati generati quotidianamente non sia strutturato. <br>Gli algoritmi di intelligenza artificiale in ambito medico sono usati per interpretare questa enorme mole di dati e per identificare possibili relazioni di causa-effetto tra i dati stessi e le patologie di cui un paziente soffre.
-        </p> <br>
-        </div>
-               
-        <div class="card-item">
-            <img src="../tecnlogia-medicina/images/Screenshot 2024-03-12 alle 22.13.17.png" alt="Card Image"><br>
-            <br><h1>L’uso dell'intelligenza artificiale in medicina comporta dei rischi?</h1><br>
-            <p>
-                Uno dei rischi più importanti legato all’uso dell'intelligenza artificiale in medicina riguarda che i sistemi utilizzati non siano stati sufficientemente testati e supportati da prove scientifiche.
-            </p>
-            <p>
-                I sistemi di intelligenza artificiale andrebbero istruiti adeguatamente per evitare distorsioni di valutazioni. Infatti, sono capitati casi di strumenti di intelligenza artificiale che hanno fallito nel rispondere a determinati quesiti perché pazienti per i quali si cercava la risposta non erano adeguatamente rappresentati nel campione con il quale la IA non era stata ben istruita.
-            </p>
         </div>
     </div>
-</div>
 
 
-    
-</div>
+
+    <div class="main-content">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <!-- Serve per far apparire le 3 linee in alto a destra dopo che diminuisci lo schermo-->
+            <!--  <i class='bx bx-menu-alt-left'></i>-->
+        </div>
+        <div style="text-align: center;">
+
+            <div style="text-align: center;">
+
+            </div>
+
+        </div>
 
 
-<!-- Script per gestire l'apertura/chiusura della barra laterale -->
-<script>
-    function toggleSidebar() {
-        document.querySelector('.sidebar').classList.toggle('active');
-    }
-</script>
+        <div class="main-content">
+            <div class="toggle-btn" onclick="toggleSidebar()">
+                <!-- Serve per far apparire le 3 linee in alto a destra dopo che diminuisci lo schermo-->
+                <!--  <i class='bx bx-menu-alt-left'></i>-->
+            </div>
+            <div class="card-list">
+                <div class="card-item">
+                    <img src="../tecnlogia-medicina/images/ia.jpeg" alt="Card Image"><br>
+                    <br>
+                    <h1>Che cosa si intende per intelligenza artificiale?</h1><br>
+                    <p>
+                        L'intelligenza artificiale è la capacità di una macchina di "ragionare, apprendere e
+                        risolvere problemi", combinando vaste quantità di dati attraverso istruzioni precise apprese
+                        automaticamente dalla macchina stessa.
+                        <br> La disponibilità di sistemi di intelligenza artificiale come ChatGPT al grande pubblico ha
+                        contribuito a rendere accessibile un argomento che inizialmente era di dominio esclusivo degli
+                        addetti ai lavori.
+                    </p>
+
+                </div>
+
+                <div class="card-item">
+                    <img src="../tecnlogia-medicina/images/_6a4c3f4a-b707-4b0c-b07e-378f04db24a5.jpeg"
+                        alt="Card Image"><br>
+                    <br>
+                    <h1>Perché è importante l’intelligenza artificiale in campo medico?</h1><br>
+                    <p>
+                        La disponibilità di dati in ambito medico è cresciuta enormemente così come le fonti da cui essi
+                        provengono. <br>
+                        Accanto ai dati tradizionali “strutturati”, rappresentabili in righe e colonne come avviene con
+                        i fogli di Excel o con i principali database (cartelle cliniche, Medline, linee guida e database
+                        biomolecolari e genetici) sono sempre più disponibili dati non strutturati (come testi,
+                        immagini, suoni, sensori, dispositivi indossabili come magliette, braccialetti, orologi
+                        intelligenti, conversazioni provenienti dai social media).<br>
+                    </p>
+                    <p>
+                        Si stima addirittura che circa l’80% dei dati generati quotidianamente non sia strutturato.
+                        <br>Gli algoritmi di intelligenza artificiale in ambito medico sono usati per interpretare
+                        questa enorme mole di dati e per identificare possibili relazioni di causa-effetto tra i dati
+                        stessi e le patologie di cui un paziente soffre.
+                    </p> <br>
+                </div>
+
+                <div class="card-item">
+                    <img src="../tecnlogia-medicina/images/Screenshot 2024-03-12 alle 22.13.17.png"
+                        alt="Card Image"><br>
+                    <br>
+                    <h1>L’uso dell'intelligenza artificiale in medicina comporta dei rischi?</h1><br>
+                    <p>
+                        Uno dei rischi più importanti legato all’uso dell'intelligenza artificiale in medicina riguarda
+                        che i sistemi utilizzati non siano stati sufficientemente testati e supportati da prove
+                        scientifiche.
+                    </p>
+                    <p>
+                        I sistemi di intelligenza artificiale andrebbero istruiti adeguatamente per evitare distorsioni
+                        di valutazioni. Infatti, sono capitati casi di strumenti di intelligenza artificiale che hanno
+                        fallito nel rispondere a determinati quesiti perché pazienti per i quali si cercava la risposta
+                        non erano adeguatamente rappresentati nel campione con il quale la IA non era stata ben
+                        istruita.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- Script per gestire l'apertura/chiusura della barra laterale -->
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
 
 </body>
+
 </html>

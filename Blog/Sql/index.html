@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,106 +13,111 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
 
-<div class="sidebar">
-    <div class="logo">
-        <span class="logo-text">MM</span>
-    </div>
-    <ul class="nav-links">
-        <li>
-            <a href="../Categorie/index.html">
-                <i class='bx bx-home'></i>
-                <span class="tooltip">Home</span>
-            </a>
-        </li>
-       
-        <!--<li class="dropdown">
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">MM</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../Categorie/index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="tooltip">Home</span>
+                </a>
+            </li>
+
+            <!--<li class="dropdown">
             <a href="../Categorie/index.html">
                 <i class='bx bx-category'></i>
                 <span class="tooltip">Categories</span>
             </a>
         </li>    -->
-        <li> 
-            <a href="https://github.com/MatDevYou">
-                <i class="fab fa-github"></i>
-                <span class="tooltip">GitHub</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="nav-links">
-        <li>
-          <a href="https://chatgpt.com/">
-            <img src="../GoogleIdx/images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
-          </a>
-        </li>
+            <li>
+                <a href="https://github.com/MatDevYou">
+                    <i class="fab fa-github"></i>
+                    <span class="tooltip">GitHub</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li>
+                <a href="https://chatgpt.com/">
+                    <img src="../GoogleIdx/images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
+                </a>
+            </li>
 
-        <li>
-            <a href="https://gemini.google.com">
-              <img src="../dropdown/images/geminiLogo.png"  alt="Gemini"> <span class="tooltip">Gemini</span>
+            <li>
+                <a href="https://gemini.google.com">
+                    <img src="../dropdown/images/geminiLogo.png" alt="Gemini"> <span class="tooltip">Gemini</span>
+                </a>
+            </li>
+        </ul>
+        <div class="back-button" onclick="goBack()">
+            <a href="../Categorie/index.html">
+                <i class='bx bx-chevron-left'></i>
             </a>
-        </li>
-      </ul>
-    <div class="back-button" onclick="goBack()">
-        <a href="../Categorie/index.html">
-            <i class='bx bx-chevron-left'></i>
-        </a>
-    </div>
-</div>
-
-<div class="main-content">
-    <div class="toggle-btn" onclick="toggleSidebar()">
-        <i class='bx bx-menu-alt-left'></i>
-    </div>
-    <div class="container">
-        <div class="row justify-content-center align-items-center vh-100">
-            <div class="col-12 text-center">
-              <div class="card-item">
-                
-          
         </div>
     </div>
-    <div class="card-list">
-        
-        <a href="../Sql/creazioneDatabase/index.html" class="card-item">
-            <img src="../Sql/images/sql.png" alt="Card Image">
-            <span class="developer">Creazione database</span>
-            <h3>"DDL (Data Definition Language), comandi per creare, eliminare e modificare tabelle e non solo"</h3>
-            <div class="arrow">
-                <i class="fas fa-arrow-right card-icon"></i>
+
+    <div class="main-content">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <!-- Serve per far apparire le 3 linee in alto a destra dopo che diminuisci lo schermo-->
+            <!--  <i class='bx bx-menu-alt-left'></i>-->
+        </div>
+        <div class="container">
+            <div class="row justify-content-center align-items-center vh-100">
+                <div class="col-12 text-center">
+                    <div class="card-item">
+
+
+                    </div>
+                </div>
+                <div class="card-list">
+
+                    <a href="../Sql/creazioneDatabase/index.html" class="card-item">
+                        <img src="../Sql/images/sql.png" alt="Card Image">
+                        <span class="developer">Creazione database</span>
+                        <h3>"DDL (Data Definition Language), comandi per creare, eliminare e modificare tabelle e non
+                            solo"</h3>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right card-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="../Sql/ricercaFiltraggio/index.html" class="card-item">
+                        <img src="../Sql/images/sql.png" alt="Card Image">
+                        <span class="designer">Ricera, filtraggio e ordinamento</span>
+                        <h3>Continuiamo con l’istruzione SELECT e stavolta vediamo le clausole WHERE e ORDER BY.
+
+                        </h3>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right card-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="../Sql/groupBy/index.html" class="card-item">
+                        <img src="../Sql/images/sql.png" alt="Card Image">
+                        <span class="editor">GROUP BY e funzioni di aggregazione</span>
+                        <h3>Conoscere la clausola GROUP BY di SQL e le principali funzioni di aggregazione che possono
+                            essere utilizzate con essa.</h3>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right card-icon"></i>
+                        </div>
+                    </a>
+                </div>
+
+
+
             </div>
-        </a>
 
-        <a href="../Sql/ricercaFiltraggio/index.html" class="card-item">
-            <img src="../Sql/images/sql.png" alt="Card Image">
-            <span class="designer">Ricera, filtraggio e ordinamento</span>
-            <h3>Continuiamo con l’istruzione SELECT e stavolta vediamo le clausole WHERE e ORDER BY.
-
-            </h3>
-            <div class="arrow">
-                <i class="fas fa-arrow-right card-icon"></i>
-            </div>
-        </a>
-        
-        <a href="../Sql/groupBy/index.html" class="card-item">
-            <img src="../Sql/images/sql.png" alt="Card Image">
-            <span class="editor">GROUP BY e funzioni di aggregazione</span>
-            <h3>Conoscere la clausola GROUP BY di SQL e le principali funzioni di aggregazione che possono essere utilizzate con essa.</h3>
-            <div class="arrow">
-                <i class="fas fa-arrow-right card-icon"></i>
-            </div>
-        </a>
-    </div>
-
-
-    
-</div>
-
-<script>
-    function toggleSidebar() {
-        document.querySelector('.sidebar').classList.toggle('active');
-    }
-</script>
+            <script>
+                function toggleSidebar() {
+                    document.querySelector('.sidebar').classList.toggle('active');
+                }
+            </script>
 
 </body>
+
 </html>
