@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology-Medicine</title>
+
+    <link rel="stylesheet" href="../card/style.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">MM</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="../Categorie/index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="tooltip">Home</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="../dropdown/index.html">
+                    <i class='bx bx-category'></i>
+                    <span class="tooltip">Arguments</span>
+                </a>
+            <li>
+                <a href="https://github.com/MatDevYou">
+                    <i class="fab fa-github"></i>
+                    <span class="tooltip">GitHub</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li>
+                <a href="https://chatgpt.com/">
+                    <img src="../GoogleIdx/images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://gemini.google.com">
+                    <img src="../dropdown/images/geminiLogo.png" alt="Gemini"> <span class="tooltip">Gemini</span>
+                </a>
+            </li>
+        </ul>
+        <div class="back-button" onclick="goBack()">
+            <a href="../dropdown/index.html">
+                <i class='bx bx-chevron-left'></i>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="main-content">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <!-- Serve per far apparire le 3 linee in alto a destra dopo che diminuisci lo schermo-->
+            <!--  <i class='bx bx-menu-alt-left'></i>-->
+        </div>
+        <div style="text-align: center;">
+
+            <div style="text-align: center;">
+
+            </div>
+
+        </div>
+
+
+        <div class="main-content">
+            <div class="toggle-btn" onclick="toggleSidebar()">
+                <!-- Serve per far apparire le 3 linee in alto a destra dopo che diminuisci lo schermo-->
+                <!--  <i class='bx bx-menu-alt-left'></i>-->
+            </div>
+            <div class="card-list">
+                <div class="card-item">
+                    <img src="../tecnlogia-medicina/images/ia.jpeg" alt="Card Image"><br>
+                    <br>
+                    <h1>Che cos'è IDX Google?</h1><br>
+                    <p>
+                        Da pochi giorni è uscito il nuovo progetto di Google.
+                        Project IDX è un'iniziativa sperimentale di Google annunciata nel 2023. Si tratta di un ambiente di sviluppo integrato (IDE) basato su cloud progettato per semplificare lo sviluppo di applicazioni web e mobile.
+                    </p>
+
+                </div>
+
+                <div class="card-item">
+                    <img src="../tecnlogia-medicina/images/_6a4c3f4a-b707-4b0c-b07e-378f04db24a5.jpeg"
+                        alt="Card Image"><br>
+                    <br>
+                    <h1>Alcuni punti chiave che ho notato durante il mio uso.</h1><br>
+                    <br>
+                    <ol style="margin-left: 20px;">
+                        <li><b>Ambiente cloud:</b> Funziona interamente nel browser, eliminando la necessità di configurare un ambiente di sviluppo locale.</li>
+                        <li><b>Supporto multilingue:</b> Offre supporto per vari linguaggi di programmazione e framework, tra cui JavaScript, TypeScript, Dart e Flutter.</li>
+                        <li><b>Integrazione con AI:</b> Incorpora funzionalità di intelligenza artificiale per assistere gli sviluppatori durante la codifica.</li>
+                        <li><b>Ottimizzato per il web:</b> È particolarmente adatto per lo sviluppo di applicazioni web e progressive web app (PWA).</li>
+                        <li><b>Accesso rapido:</b> Permette agli sviluppatori di iniziare rapidamente nuovi progetti senza configurazioni complesse.</li>
+                        <li><b>Integrazione con altri strumenti Google:</b> Si integra con altri servizi Google come Firebase per il backend e il deployment.</li>
+                    </ol>
+
+                </div>
+
+                <div class="card-item">
+                    <img src="../tecnlogia-medicina/images/Screenshot 2024-03-12 alle 22.13.17.png"
+                        alt="Card Image"><br>
+                    <br>
+                    <h1>Innovazione o flop?</h1><br>
+                    <p>
+                        Uno dei rischi più importanti legato all’uso dell'intelligenza artificiale in medicina riguarda
+                        che i sistemi utilizzati non siano stati sufficientemente testati e supportati da prove
+                        scientifiche.
+                    </p>
+                    <p>
+                        I sistemi di intelligenza artificiale andrebbero istruiti adeguatamente per evitare distorsioni
+                        di valutazioni. Infatti, sono capitati casi di strumenti di intelligenza artificiale che hanno
+                        fallito nel rispondere a determinati quesiti perché pazienti per i quali si cercava la risposta
+                        non erano adeguatamente rappresentati nel campione con il quale la IA non era stata ben
+                        istruita.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <!-- Script per gestire l'apertura/chiusura della barra laterale -->
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
