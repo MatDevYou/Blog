@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <link rel="stylesheet" href="../card/style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link agli iconi di Boxicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+            <span class="logo-text">MM</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="https://matdevyou.github.io/Blog/Blog/Categorie/index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="tooltip">Home</span>
+                </a>
+            </li>
+
+            <!--<li class="dropdown">
+            <a href="../Categorie/index.html">
+                <i class='bx bx-category'></i>
+                <span class="tooltip">Categories</span>
+            </a>
+        </li>    -->
+            <li>
+                <a href="https://github.com/MatDevYou">
+                    <i class="fab fa-github"></i>
+                    <span class="tooltip">GitHub</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav-links">
+            <li>
+                <a href="https://chatgpt.com/">
+                    <img src="../GoogleIdx/images/chat.webp" alt="ChatGPT"> <span class="tooltip">ChatGPT</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://gemini.google.com">
+                    <img src="../dropdown/images/geminiLogo.png" alt="Gemini"> <span class="tooltip">Gemini</span>
+                </a>
+            </li>
+        </ul>
+        <div class="back-button" onclick="goBack()">
+            <a href="../Categorie/index.html">
+                <i class='bx bx-chevron-left'></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <!-- Serve per far apparire le 3 linee in alto a destra dopo che diminuisci lo schermo-->
+            <!--  <i class='bx bx-menu-alt-left'></i>-->
+        </div>
+        <div class="container">
+            <div class="row justify-content-center align-items-center vh-100">
+                <div class="col-12 text-center">
+                    <div class="card-item">
+
+
+                    </div>
+                </div>
+                <div class="card-list">
+
+                    <a href="../Html/Introduzione/index.html" class="card-item">
+                        <img src="../Html/images/html-tagst.jpg" alt="Card Image">
+                        <span class="developer">Introduzione HTML</span>
+                        <h3>"Con il markup si impostano la struttura di pagine Web come delle app Mobile. Qui una
+                            panoramica per entrare nello sfaccettato mondo dell'HTML."</h3>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right card-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="../Html/Elementi/index.html" class="card-item">
+                        <img src="../Html/images/html-tagst.jpg" alt="Card Image">
+                        <span class="designer">Elementi</span>
+                        <h3>"Cosa sono gli elementi e i TAG in HTML, la semantica, la definizione del layout, le
+                            tipologie di elementi."
+                        </h3>
+                        <br><br><br><br>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right card-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="../Html/Ipertesti/index.html" class="card-item">
+                        <img src="../Html/images/html-tagst.jpg" alt="Card Image">
+                        <span class="editor">Ipertesti</span>
+                        <h3>"Introduzione all'ipertestualità e alla funzione dei link in una pagina Web."</h3>
+                        <br><br><br><br>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right card-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="../Html/SfondoDoc/index.html" class="card-item">
+                        <img src="../Html/images/html-tagst.jpg" alt="Card Image">
+                        <span class="developer">Lo sfondo di un documento HTML</span>
+                        <h3>"Come scegliere e come impostare il colore di sfondo di una pagina Web."</h3>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right card-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="../Sql/groupBy/index.html" class="card-item">
+                        <img src="../Html/images/html-tagst.jpg" alt="Card Image">
+                        <span class="designer">I Frame </span>
+                        <h3>"Cosa sono i frame; la struttura di un frameset; i frameset annidati."</h3>
+                        <br><br><br><br>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right card-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="../Sql/groupBy/index.html" class="card-item">
+                        <img src="../Html/images/html-tagst.jpg" alt="Card Image">
+                        <span class="editor">I Moduli</span>
+                        <h3>"La struttura del tag Form e i suoi principali utilizzi."</h3>
+                        <br><br><br><br>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right card-icon"></i>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+
+            </div>
+
+            <script>
+                function toggleSidebar() {
+                    document.querySelector('.sidebar').classList.toggle('active');
+                }
+            </script>
+
+</body>
+
+</html>
