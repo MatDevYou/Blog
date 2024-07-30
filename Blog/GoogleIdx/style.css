@@ -169,7 +169,7 @@ p {
     max-width: 150%; /* Assicura che l'immagine non superi la larghezza del contenitore */
     height: auto; /* Impedisce il ridimensionamento distorto */
     width: 150px; /* Definisci la larghezza desiderata */
-    height: 150px; /* Definisci l'altezza desiderata */
+    height: 110px; /* Definisci l'altezza desiderata */
 }
 
 .back-button {
